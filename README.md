@@ -2,6 +2,13 @@
 
 Provides an inspect that has syntax highlighting.
 
+# Usage
+
+![example](example.png)
+
+In this example were used the default colors for this library and the shell used the default linux colors.
+
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
