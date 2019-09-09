@@ -16,42 +16,12 @@ defmodule ColoredInspect do
     Simple wrapper over the IO.inspect/2 function that colorizes the output
   """
   @spec color_inspect(any()) :: any()
-  def color_inspect(item, opts \\ []) do
+  def color_inspect(item, opts \\ []) when is_list(opts) do
     IO.inspect(
       item,
       [
         {
           :syntax_colors,
-          # [
-          #   number: :red,
-          #   atom: :green,
-          #   regex: :white,
-          #   tuple: :yellow,
-          #   map: :blue,
-          #   list: :magenta
-          # ])
-
-          # rainbow
-          # [
-          #   number: :red,
-          #   atom: :blue,
-          #   regex: :white,
-          #   tuple: :yellow,
-          #   map: :green,
-          #   list: :magenta,
-          #   string: [:bright, :yellow]
-          # ]
-
-          # Default iex style
-          # [
-          #   number: :yellow,
-          #   atom: :cyan,
-          #   regex: :white,
-          #   tuple: [:bright, :red],
-          #   list: :magenta,
-          #   string: :green
-          # ]
-
           [
             number: [:bright, :red],
             atom: [:bright, :blue],
