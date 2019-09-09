@@ -2,8 +2,6 @@
 
 Provides an inspect that has syntax highlighting.
 
-TODO: Provide configurable colors
-
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed

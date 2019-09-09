@@ -17,21 +17,19 @@ defmodule ColorizedInspect do
   """
   @spec color_inspect(any()) :: any()
   def color_inspect(item, opts \\ []) when is_list(opts) do
-    IO.inspect(
-      item,
-      [
-        {
-          :syntax_colors,
-          [
-            number: [:bright, :red],
-            atom: [:bright, :blue],
-            regex: [:bright, :magenta],
-            tuple: :yellow,
-            list: :cyan,
-            string: :green
-          ]
-        }
-      ] ++ opts
-    )
+    IO.inspect(item, [syntax_colors: color_scheme()] ++ opts)
+  end
+
+  defp color_scheme do
+    default_color_scheme = [
+      number: [:bright, :red],
+      atom: [:bright, :blue],
+      regex: [:bright, :magenta],
+      tuple: :yellow,
+      list: :cyan,
+      string: :green
+    ]
+
+    Application.get_env(:colorized_inspect, :color_scheme, default_color_scheme)
   end
 end
