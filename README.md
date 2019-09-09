@@ -49,7 +49,7 @@ by adding `colorized_inspect` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:colorized_inspect, "~> 0.1.0"}
+    {:colorized_inspect, "~> 1.0.0"}
   ]
 end
 ```
