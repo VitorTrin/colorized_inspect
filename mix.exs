@@ -1,9 +1,9 @@
-defmodule ColoredInspect.MixProject do
+defmodule ColorizedInspect.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :colored_inspect,
+      app: :colorized_inspect,
       version: "0.1.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,

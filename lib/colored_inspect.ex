@@ -1,4 +1,4 @@
-defmodule ColoredInspect do
+defmodule ColorizedInspect do
   @moduledoc """
     Provides an inspect that has syntax highlighting.
   """
