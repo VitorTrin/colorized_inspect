@@ -13,9 +13,10 @@ defmodule ColorizedInspect do
   end
 
   @doc """
-    Simple wrapper over the IO.inspect/2 function that colorizes the output
+    Simple wrapper over the IO.inspect/2 function that colorizes the output.
+    The opts are the same opts as IO.inspect/2.
   """
-  @spec color_inspect(any()) :: any()
+  @spec color_inspect(any(), keyword()) :: any()
   def color_inspect(item, opts \\ []) when is_list(opts) do
     IO.inspect(item, [syntax_colors: color_scheme()] ++ opts)
   end
